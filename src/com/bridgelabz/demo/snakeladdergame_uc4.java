@@ -10,7 +10,7 @@ public class snakeladdergame_uc4 {
 		 int player = 0;
 		 
 		 while(player == Win_Position) {
-			 int dice = (int)((Math.random()*10)%6) + 1;
+			 int dice = (int)((Math.random()*10)%6)+1;
 			 
 			 switch(dice){
 				 
@@ -26,7 +26,14 @@ public class snakeladdergame_uc4 {
 			 		}
 			 		break;
 			 		
-			 case ladder: player = player + dice;
+			 case ladder: int temp1 = player + dice;
+			 		if(temp1 <= 100) {
+			 			player = 100;
+			 		}
+			 		else
+			 		{
+			 			player = temp1;
+			 		}
 			 		break;
 			 }
 			 System.out.println("Player's Position: "+player);
