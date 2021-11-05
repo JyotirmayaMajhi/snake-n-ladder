@@ -9,8 +9,8 @@ public class snakeladdergame_uc4 {
 		 final int ladder = 2;
 		 int player = 0;
 		 
-		 while(player < Win_Position) {
-			 int dice = (int)(Math.random()*6 + 1);
+		 while(player == Win_Position) {
+			 int dice = (int)((Math.random()*10)%6) + 1;
 			 
 			 switch(dice){
 				 
@@ -18,7 +18,7 @@ public class snakeladdergame_uc4 {
 				 break;
 				 
 			 case snake: int temp = player - dice;
-			 		if(temp <0) {
+			 		if(temp < 0) {
 			 			player = 0;
 			 		}
 			 		else {
